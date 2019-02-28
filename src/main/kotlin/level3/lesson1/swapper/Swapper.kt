@@ -10,9 +10,9 @@ fun <T> Array<T>.swapElements(index1: Int, index2: Int) {
         throw IllegalArgumentException("Array hasn't element [$index2]")
     }
 
-    val temp = this[index1]
-    this[index1] = this[index2]
-    this[index2] = temp
+    this[index1] = this[index2].also {
+        this[index2] = this[index1]
+    }
 }
 
 fun main() {
