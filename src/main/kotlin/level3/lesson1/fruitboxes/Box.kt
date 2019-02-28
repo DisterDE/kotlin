@@ -22,7 +22,7 @@ class Box<E : Fruit> {
     }
 
     fun moveFruitsTo(other: Box<E>) {
-        other.fruitList.addAll(this.fruitList)
-        this.fruitList.clear()
+        fruitList.forEach { other.add(it) }
+        fruitList.clear()
     }
 }
