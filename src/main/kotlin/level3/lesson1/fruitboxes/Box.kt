@@ -9,16 +9,16 @@ class Box<E : Fruit> {
         fruitList = ArrayList()
     }
 
+    internal val weight: Double
+        get() = fruitList.sumByDouble { it.weight }
+
+
     fun add(fruit: E): Boolean {
         return fruitList.add(fruit)
     }
 
     fun compare(other: Box<*>): Boolean {
-        return abs(this.getWeight() - other.getWeight()) < 0.00001
-    }
-
-    fun getWeight(): Double {
-        return fruitList.sumByDouble { it.weight }
+        return abs(this.weight - other.weight) < 0.00001
     }
 
     fun moveFruitsTo(other: Box<E>) {
