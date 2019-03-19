@@ -7,7 +7,7 @@ class Printer(private val neededLetter: Letter) {
     }
 
     internal fun print() {
-        for (i in 0..count) {
+        for (i in 0 until count) {
             synchronized(LOCKER) {
                 while (currentLetter != neededLetter) {
                     try {
