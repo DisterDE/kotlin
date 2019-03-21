@@ -7,9 +7,9 @@ internal fun getArrAfterLastFour(nums: IntArray): IntArray {
         throw RuntimeException("Array is not valid: ${nums.joinToString()}")
     }
 
-    return IntArray(nums.size - index - 1) {
-        nums[index + 1 + it]
-    }
+    val result = nums.drop(index + 1)
+
+    return result.toIntArray()
 }
 
 internal fun isArrContainsOnly1And4(nums: IntArray): Boolean {
