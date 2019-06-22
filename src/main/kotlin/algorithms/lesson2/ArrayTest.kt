@@ -1,4 +1,4 @@
-package algorithms.lesson1
+package algorithms.lesson2
 
 import kotlin.random.Random.Default.nextInt
 import kotlin.system.measureTimeMillis
@@ -21,10 +21,10 @@ fun main() {
     })
 
     println("Selection sort: " + measureTimeMillis {
-        ArrayUtils.sortBubble(arr2)
+        ArrayUtils.sortSelection(arr2)
     })
 
     println("Insertion sort: " + measureTimeMillis {
-        ArrayUtils.sortBubble(arr3)
+        ArrayUtils.sortInsertion(arr3)
     })
 }

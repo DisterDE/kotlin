@@ -1,4 +1,4 @@
-package algorithms.lesson1
+package algorithms.lesson2
 
 object ArrayUtils {
     fun sortBubble(arr: IntArray) {
