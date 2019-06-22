@@ -2,9 +2,10 @@ package algorithms.lesson2
 
 
 class ArrayImpl : Array {
-    private var array = IntArray(INITIAL_ARRAY_SIZE)
 
+    private var array = IntArray(INITIAL_ARRAY_SIZE)
     private var size = 0
+
     override fun add(value: Int): Boolean {
         if (isFull()) {
             checkGrow()
