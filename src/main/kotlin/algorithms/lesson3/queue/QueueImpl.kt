@@ -42,7 +42,6 @@ class QueueImpl(maxSize: Int) : Queue {
             }
             currentSize--
         }
-        println()
     }
 
     companion object {
